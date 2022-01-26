@@ -10,7 +10,7 @@ const FirstSlideShow = () => {
 
   return (
     <div className="flex">
-      <div className="w-full mx-40 sm:mx-20 md:mx-5">
+      <div className="w-full my-14 mx-40 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}

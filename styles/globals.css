@@ -5,3 +5,19 @@
 @import url('./flickity.css');
 
 
+
+
+.card-zoom-image {
+  @apply transition-all duration-500 ease-in-out transform;
+}
+
+.card-zoom-text {
+  @apply  text-5xl font-black transition-all duration-500 ease-in-out transform scale-110 text-gray-50 opacity-60;
+}
+
+.card-zoom-image:hover  {
+  @apply scale-110;
+}
+.card-zoom:hover .card-zoom-text {
+  @apply scale-110;
+}

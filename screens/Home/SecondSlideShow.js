@@ -9,10 +9,10 @@ const SecondSlideShow = () => {
     pageDots: false
   };
   return (
-    <div className="flex w-full h-96 mt-20 mb-56" >
+    <div className="flex w-full mt-14 py-20 bg-gray-100" >
       <div className="w-2/5 h-full pt-28">
         <div
-          className="h-60 bg-gray-100 justify-items-center ml-10"
+          className="h-60 bg-white justify-items-center ml-10"
           style={{ display: "grid" }}
         >
           <div className="self-center">
@@ -26,7 +26,7 @@ const SecondSlideShow = () => {
           <div >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/img/home_page/showcase/YetiCycles_160E_T1_Turq.jpeg"
+              src="/img/home_page/showcase/YetiCycles_160E_T1_Turq-removebg-preview.png"
               className="px-20"
               
               alt="showcase"
@@ -39,7 +39,7 @@ const SecondSlideShow = () => {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/img/home_page/showcase/YetiCycles_SB115_T3_Turq_AXS.jpeg"
+              src="/img/home_page/showcase/YetiCycles_SB115_T3_Turq_AXS-removebg-preview.png"
               className="px-20"
               alt="showcase"
             />
@@ -51,7 +51,7 @@ const SecondSlideShow = () => {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/img/home_page/showcase/YetiCycles_SB150_T1_Turq_CW.jpeg"
+              src="/img/home_page/showcase/YetiCycles_SB150_T1_Turq_CW-removebg-preview.png"
               className="px-20"
               alt="showcase"
             />
