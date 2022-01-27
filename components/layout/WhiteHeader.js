@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-const Header = () => {
+const WhiteHeader = () => {
   return (
     <>
-      <nav className="  dark:bg-gray-800">
+      <nav className=" sticky top-0 inset-x-0 z-50 bg-white dark:bg-gray-800">
         <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <div>
               <a
-                className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
+                className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
                 href="#"
               >
                 Brand
@@ -36,27 +36,25 @@ const Header = () => {
           <div className="items-center md:flex">
             {/* <div className="flex flex-col md:flex-row md:mx-6"> */}
             <div className="flex md:flex-row md:mx-6">
-              
-              <Link
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="/"
-              >
-                Home
+              <Link href="/">
+                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                  Home
+                </a>
               </Link>
               <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
                 href="/shop"
               >
                 Shop
               </a>
               <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
                 href="#"
               >
                 Contact
               </a>
               <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
                 href="#"
               >
                 About
@@ -93,4 +91,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default WhiteHeader;

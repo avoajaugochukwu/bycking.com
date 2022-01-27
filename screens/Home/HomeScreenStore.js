@@ -1,31 +1,4 @@
-const PopularProducts = [
-  {
-    name: "Yeti SB115 The World Famous",
-    description: "$2,495.00 Monthly from $62.38",
-    imgURL: "/img/home_page/showcase/YetiCycles_SB115_T3_Turq_AXS.jpeg",
-    numGears: 8,
-    brakeType: "V Brakes",
-    weightCategory: "20 - 25kg",
-  },
-  {
-    name: "Raleigh Motus Tour Plus - Hub Gear",
-    description: "$2,495.00 Monthly from $62.38",
-    imgURL:
-      "/img/home_page/popular_products/Motus-Tour-Plus-Lowstep-Blue-hub-image-1_1024x1024.jpeg",
-    numGears: 8,
-    brakeType: "V Brakes",
-    weightCategory: "20 - 25kg",
-  },
-  {
-    name: "Raleigh Willow",
-    description: "$2,495.00 Monthly from $62.38",
-    imgURL:
-      "/img/home_page/popular_products/Willow-cherry-Image-1_1024x1024.jpeg",
-    numGears: 8,
-    brakeType: "V Brakes",
-    weightCategory: "20 - 25kg",
-  },
-];
+import PopularProductsData from "./PopularProductsData";
 
 const HomeScreenStore = () => {
   return (
@@ -36,7 +9,7 @@ const HomeScreenStore = () => {
         </p>
       </div>
       <div className="flex gap-x-10 px-10 pt-10 pb-20">
-        {PopularProducts.map((product, index) => (
+        {PopularProductsData.map((product, index) => (
           <div
             key={index}
             className="w-full bg-white cursor-pointer rounded-lg py-4"
@@ -77,14 +50,23 @@ const HomeScreenStore = () => {
             className="h-full justify-items-center "
             style={{ display: "grid" }}
           >
-            <div className="self-center">
+            <div className="self-center mx-3">
               <p className="text-5xl font-bold">
                 GO YOUR <br />
                 <span className="text-white">OWN</span> WAY
               </p>
-              <button className="self-center bg-white py-2 w-full px-9 rounded-3xl">Find a store</button>
+              <div className="mr-10">
+              <p className="font-light mr-5 text-sm">
+                Ready, set, pedal. With a bike, you can take on the
+                world - whether it&apos;s a commute, a challenging trail, or a
+                great workout.
+              </p>
+              
+                <button className="self-center bg-white py-2 w-full px-9 rounded-3xl mr-5">
+                  Find a store
+                </button>
+              </div>
             </div>
-            
           </div>
         </div>
         <div className="w-3/4">
