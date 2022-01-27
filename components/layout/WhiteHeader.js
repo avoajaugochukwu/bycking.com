@@ -41,24 +41,21 @@ const WhiteHeader = () => {
                   Home
                 </a>
               </Link>
-              <a
-                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="/shop"
-              >
-                Shop
-              </a>
-              <a
-                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="#"
-              >
-                Contact
-              </a>
-              <a
-                className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="#"
-              >
-                About
-              </a>
+              <Link href="/shop">
+                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                  Shop
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                  Contact
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                  About
+                </a>
+              </Link>
             </div>
 
             <div className="flex justify-center md:block">

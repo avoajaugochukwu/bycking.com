@@ -8,11 +8,11 @@ const HomeScreenStore = () => {
           Popular items
         </p>
       </div>
-      <div className="flex gap-x-10 px-10 pt-10 pb-20">
+      <div className=" md:flex gap-x-10 px-4 sm:px-10 pt-10 pb-20">
         {PopularProductsData.map((product, index) => (
           <div
             key={index}
-            className="w-full bg-white cursor-pointer rounded-lg py-4"
+            className="w-full bg-white cursor-pointer rounded-lg py-4 my-4"
           >
             <div className="px-4 overflow-hidden">
               <p className="text-xl font-semibold">{product.name}</p>

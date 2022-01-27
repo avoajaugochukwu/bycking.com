@@ -9,8 +9,8 @@ const FirstSlideShow = () => {
   };
 
   return (
-    <div className="flex">
-      <div className="w-full my-14 mx-40 sm:mx-20 md:mx-5">
+    <div className="flex flex-col-reverse sm:flex sm:flex-row">
+      <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -19,7 +19,7 @@ const FirstSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Legendary DNA</span>
               <span className="text-neutral-400"> ARC</span>
             </div>
@@ -31,7 +31,7 @@ const FirstSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">At home outside the tape</span>
               <span className="text-neutral-400"> SB165</span>
             </div>
@@ -43,7 +43,7 @@ const FirstSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Down to fun</span>
               <span className="text-neutral-400"> SB140</span>
             </div>
@@ -55,7 +55,7 @@ const FirstSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">One bike that rules</span>
               <span className="text-neutral-400"> SB130</span>
             </div>
@@ -63,14 +63,14 @@ const FirstSlideShow = () => {
         </Flickity>
       </div>
       {/*  */}
-      <div className="w-2/5 h-full pt-28">
+      <div className="w-full sm:w-2/5 h-full pt-10 sm:pt-28">
         <div
-          className="h-60 bg-gray-100 justify-items-center mr-10"
+          className="sm:h-60 h-30 sm:bg-gray-100 justify-items-center sm:mr-10"
           style={{ display: "grid" }}
         >
           <div className="self-center">
-            <h3 className="text-center text-6xl">RIP</h3>
-            <p className="text-center font-bold">DOWN TO FUN</p>
+            <h3 className="text-center text-4xl sm:text-6xl">RIP</h3>
+            <p className="text-center text-base sm:text-sm font-bold">DOWN TO FUN</p>
           </div>
         </div>
       </div>

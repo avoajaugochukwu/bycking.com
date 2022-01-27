@@ -9,19 +9,19 @@ const SecondSlideShow = () => {
     pageDots: false
   };
   return (
-    <div className="flex w-full mt-14 py-20 bg-gray-100" >
-      <div className="w-2/5 h-full pt-28">
+    <div className="flex flex-col-reverse sm:flex sm:flex-row bg-gray-100 mt-10 pb-7" >
+      <div className="w-full sm:w-2/5 h-full pt-10 sm:pt-28">
         <div
-          className="h-60 bg-white justify-items-center ml-10"
+          className="sm:h-60 h-30 sm:bg-white justify-items-center sm:mr-10"
           style={{ display: "grid" }}
         >
           <div className="self-center">
-            <h3 className="text-center text-6xl">RACE</h3>
-            <p className="text-center font-bold">UNBRIDLED SPEED</p>
+            <h3 className="text-center text-4xl sm:text-6xl">RACE</h3>
+            <p className="text-center text-base sm:text-sm font-bold">UNBRIDLED SPEED</p>
           </div>
         </div>
       </div>
-      <div className="w-full mx-40 sm:mx-20 md:mx-5">
+      <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -31,7 +31,7 @@ const SecondSlideShow = () => {
               
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">e-mtb for racing</span>
               <span className="text-neutral-400"> 160E</span>
             </div>
@@ -43,7 +43,7 @@ const SecondSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">deft on the downs</span>
               <span className="text-neutral-400"> SB115</span>
             </div>
@@ -55,7 +55,7 @@ const SecondSlideShow = () => {
               className="px-20"
               alt="showcase"
             />
-            <div className="text-3xl uppercase font-semibold text-center">
+            <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Unbridled speed</span>
               <span className="text-neutral-400"> SB150</span>
             </div>

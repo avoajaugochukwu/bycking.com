@@ -1,10 +1,18 @@
+import React, {useState} from 'react';
 import Link from "next/link";
+import styles from "./Header.module.css";
 
 const Header = () => {
+
+  const [navOpen, setNavOpen] = useState(false)
+
+  console.log(navOpen)
   return (
     <>
-      <nav className="  dark:bg-gray-800">
-        <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <nav className="  relative">
+        {navOpen && <div className="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-40 overflow-hidden bg-white "/>}
+        
+        <div className={`container px-6 py-4 mx-auto md:flex z-50 md:justify-between md:items-center ${navOpen ? "fixed" : ""}`}>
           <div className="flex items-center justify-between">
             <div>
               <a
@@ -21,6 +29,7 @@ const Header = () => {
                 type="button"
                 className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
                 aria-label="toggle menu"
+                onClick={() => {setNavOpen(!navOpen)}}
               >
                 <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
                   <path
@@ -33,34 +42,21 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu open: "block", Menu closed: "hidden" */}
-          <div className="items-center md:flex">
+          <div className={` ${navOpen ? "block" : "hidden"} items-center md:flex `}>
             {/* <div className="flex flex-col md:flex-row md:mx-6"> */}
-            <div className="flex md:flex-row md:mx-6">
-              
-              <Link
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="/"
-              >
-                Home
+            <div className={`flex ${navOpen ? "flex-col text-gray-700" : ""}  md:flex-row md:mx-6`}>
+              <Link href="/">
+                <a className={`${styles.link} ${navOpen ? "text-gray-700" : "text-white"}`}>Home</a>
               </Link>
-              <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="/shop"
-              >
-                Shop
-              </a>
-              <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="#"
-              >
-                Contact
-              </a>
-              <a
-                className="my-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-                href="#"
-              >
-                About
-              </a>
+              <Link href="/shop">
+                <a className={`${styles.link} ${navOpen ? "text-gray-700" : "text-white"}`}>Shop</a>
+              </Link>
+              <Link href="#">
+                <a className={`${styles.link} ${navOpen ? "text-gray-700" : "text-white"}`}>Contact</a>
+              </Link>
+              <Link href="#">
+                <a className={`${styles.link} ${navOpen ? "text-gray-700" : "text-white"}`}>About</a>
+              </Link>
             </div>
 
             <div className="flex justify-center md:block">
