@@ -44,11 +44,11 @@ const HomeScreenStore = () => {
         ))}
       </div>
       {/*  */}
-      <div className="flex py-20 px-4">
-        <div className="w-1/4">
+      <div className="flex sm:py-20 py-5 px-4 sm:flex-row flex-col-reverse">
+        <div className="sm:w-1/4 w-full mt-4">
           <div
-            className="h-full justify-items-center "
-            style={{ display: "grid" }}
+            className="h-full justify-items-center flex "
+            // style={{ display: "grid" }}
           >
             <div className="self-center mx-3">
               <p className="text-5xl font-bold">
@@ -69,7 +69,7 @@ const HomeScreenStore = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/4">
+        <div className="sm:w-3/4 w-full">
           <img src="/img/home_page/raleigh-motus-ebike-shop.webp" />
         </div>
       </div>
