@@ -1,16 +1,23 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import Link from "next/link";
 import styles from "./Header.module.css";
+import { CartContext } from '../../store/context/CartContextProvider'
 
 const Header = () => {
 
+  const cart = useContext(CartContext)
+
+  const addAction = () => {
+    cart.dispatch({type: 'ADD_ITEM', payload: 'Honey'})
+  }
+
+  console.log(cart)
   const [navOpen, setNavOpen] = useState(false)
 
-  console.log(navOpen)
   return (
     <>
       <nav className="  relative">
-        {navOpen && <div className="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-40 overflow-hidden bg-white "/>}
+        {navOpen && <div className="hidden sm:block fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-40 overflow-hidden bg-white "/>}
         
         <div className={`container px-6 py-4 mx-auto md:flex z-50 md:justify-between md:items-center ${navOpen ? "fixed" : ""}`}>
           <div className="flex items-center justify-between">
@@ -18,6 +25,7 @@ const Header = () => {
               <a
                 className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
                 href="#"
+                onClick={addAction}
               >
                 Brand
               </a>

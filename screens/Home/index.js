@@ -18,8 +18,7 @@ const HomeScreen = ({data}) => {
       <Hero />
       </div>
       <div className="relative">
-      {/* <FirstSlideShow data={data} /> */}
-      {/* <TestSlideShow data={data} /> */}
+      
       <FirstSlideShow />
       <SecondSlideShow />
       <HomeScreenStore />
