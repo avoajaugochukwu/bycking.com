@@ -2,10 +2,10 @@ import React from "react";
 
 const HamburgerMenu = ({ color = "#ffffff" }) => {
   return (
-    <svg className="cursor-pointer" viewBox="0 0 80 80"  fill={color}>
-      <rect width="50" height="5"></rect>
-      <rect y="15" width="50" height="5"></rect>
-      <rect y="30" width="50" height="5"></rect>
+    <svg className="cursor-pointer" width="40" height="40" fill={color}>
+      <rect width="35" height="3"></rect>
+      <rect y="10" width="35" height="3"></rect>
+      <rect y="20" width="35" height="3"></rect>
     </svg>
   );
 };

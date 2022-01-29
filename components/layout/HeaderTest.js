@@ -19,40 +19,44 @@ const HeaderTest = () => {
       <nav className="bg-black/0 " onClick={(e) => e.stopPropagation()}>
         {" "}
         {/* navbar */}
-        <div className=" flex">
+        <div className="flex justify-between ">
           {" "}
           {/* nav-container */}
-          <a to="/" className="nav-logo">
-            CodeBucks
-            <i className="fa fa-code"></i>
-          </a>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Contact Us
-              </a>
-            </li>
-          </ul>
+          <div>
+            <a to="/" className="nav-logo">
+              CodeBucks
+              <i className="fa fa-code"></i>
+            </a>
+          </div>
+          <div>
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <a className="nav-links" onClick={click ? handleClick : null}>
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-links" onClick={click ? handleClick : null}>
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-links" onClick={click ? handleClick : null}>
+                  Blog
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-links" onClick={click ? handleClick : null}>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
           <div className=" text-yellow-400 pt-4" onClick={handleClick}>
             <p className="">
               {click ? <CloseSign /> : <HamburgerMenu />}
-
-              {click ? <CloseSign /> : <CloseSign />}
+              
+              
             </p>
           </div>
         </div>
