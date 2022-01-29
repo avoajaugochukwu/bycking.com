@@ -41,11 +41,15 @@ const Hero = () => {
                 "url('/img/home_page/buy-online-home-storyteller.jpeg')",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
+              backgroundColor: "rgba(255,255,255, 0.5)",
               height: "100vh",
               width: "100vw",
             }}
           >
+            <div className="w-full h-full bg-cyan-500/50">
             <HeaderTest />
+            </div>
+            
             {/* <Header /> */}
           </div>
         </div>
