@@ -28,14 +28,6 @@
   max-width: 1500px;
 }
 
-.main-container{
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background-color:rgba(0,0,0,0.3);
-}
 
 .nav-logo {
   color: #f5b921;
@@ -47,12 +39,12 @@
   flex-grow: 1;
 }
 
-.nav-menu {
+/* .nav-menu {
   display: flex;
   list-style: none;
   text-align: center;
   margin-right: 2rem;
-}
+} */
 
 .nav-links {
   color: #fff;
@@ -97,9 +89,10 @@
   
   .nav-menu {
     display: flex;
+    text-align: center;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    border-top: 1px solid #fff;
     position: absolute;
     top: 80px;
     left: -110%;
@@ -108,7 +101,7 @@
   }
 
   .nav-menu.active {
-    background: #1f5156;
+    /* background: #1f5156; */
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;
