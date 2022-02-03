@@ -1,6 +1,7 @@
-import ShopProductsSection from "./ShopProductsSection";
+import ProductList from "./ProductList";
 
-const ShopLayout = () => {
+const ShopLayout = (props) => {
+  
   return (
     <div className="">
       <div className="flex ">
@@ -10,10 +11,10 @@ const ShopLayout = () => {
         ;kkk
         {/* </div> */}
         <main
-          className=" md:pl-60 min-h-screen min-w-full"
+          className=" md:pl-60 min-h-screen"
           style={{ height: "10000px" }}
         >
-          <ShopProductsSection />
+          {props.children}
         </main>
       </div>
     </div>

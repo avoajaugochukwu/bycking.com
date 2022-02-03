@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Flickity from "react-flickity-component";
 
@@ -5,19 +6,44 @@ const FirstSlideShow = () => {
   const flickityOptions = {
     fullscreen: true,
     wrapAround: true,
-    pageDots: false
+    pageDots: false,
   };
+
+  const sliderList = [
+    {
+      src:"/img/home_page/showcase/yeti-arc.jpeg",
+      name:"Legendary DNA",
+      styled_name:" ARC"
+    },
+    {
+      src:"/img/home_page/showcase/YetiCycles_SB165_T3_Moss.jpeg",
+      name:"At home outside the tape",
+      styled_name:" SB165"
+    },
+    {
+      src:"/img/home_page/showcase/YetiCycles_SB130LR_T5_Watermelon_AXS_CW.jpeg",
+      name:"Down to fun",
+      styled_name:" SB140"
+    },
+    {
+      src:"/img/home_page/showcase/yeti-arc.jpeg",
+      name:"One bike that rules",
+      styled_name:" SB130"
+    }
+  ]
 
   return (
     <div className="flex flex-col-reverse sm:flex sm:flex-row">
       <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/img/home_page/showcase/yeti-arc.jpeg"
               className="px-20"
               alt="showcase"
+              layout="intrinsic"
+              width={900}
+              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Legendary DNA</span>
@@ -25,11 +51,13 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/img/home_page/showcase/YetiCycles_SB165_T3_Moss.jpeg"
               className="px-20"
               alt="showcase"
+              layout="intrinsic"
+              width={900}
+              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">At home outside the tape</span>
@@ -37,11 +65,13 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/img/home_page/showcase/YetiCycles_SB140LR_T5_Blanco.jpeg"
               className="px-20"
               alt="showcase"
+              layout="intrinsic"
+              width={900}
+              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Down to fun</span>
@@ -49,11 +79,13 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/img/home_page/showcase/YetiCycles_SB130LR_T5_Watermelon_AXS_CW.jpeg"
               className="px-20"
               alt="showcase"
+              layout="intrinsic"
+              width={900}
+              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">One bike that rules</span>
@@ -70,7 +102,9 @@ const FirstSlideShow = () => {
         >
           <div className="self-center">
             <h3 className="text-center text-4xl sm:text-6xl">RIP</h3>
-            <p className="text-center text-base sm:text-sm font-bold">DOWN TO FUN</p>
+            <p className="text-center text-base sm:text-sm font-bold">
+              DOWN TO FUN
+            </p>
           </div>
         </div>
       </div>

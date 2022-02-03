@@ -1,11 +1,11 @@
 import Head from "next/head";
 import HomeScreen from "../screens/Home";
-import path from "path";
-import fs from "fs";
+// import path from "path";
+// import fs from "fs";
 import Footer from "../components/layout/Footer";
 
 export default function Home(first_slideshow) {
-  const data = { ...first_slideshow };
+  // const data = { ...first_slideshow };
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Home(first_slideshow) {
       </Head>
 
       <main>
-        <HomeScreen data={data} />
+        <HomeScreen  />
       </main>
       <footer>
         <Footer />
@@ -25,14 +25,14 @@ export default function Home(first_slideshow) {
   );
 }
 
-export async function getStaticProps() {
-  const FSSlidePath = path.join(process.cwd(), "data", "first_slideshow.json");
-  const FSSlideContent = fs.readFileSync(FSSlidePath, "utf8");
-  const first_slideshow = JSON.parse(FSSlideContent);
+// export async function getStaticProps() {
+//   const FSSlidePath = path.join(process.cwd(), "data", "first_slideshow.json");
+//   const FSSlideContent = fs.readFileSync(FSSlidePath, "utf8");
+//   const first_slideshow = JSON.parse(FSSlideContent);
 
-  return {
-    props: {
-      first_slideshow,
-    },
-  };
-}
+//   return {
+//     props: {
+//       first_slideshow,
+//     },
+//   };
+// }

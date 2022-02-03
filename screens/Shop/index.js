@@ -1,11 +1,16 @@
 import ShopLayout from "./ShopLayout";
 import WhiteHeader from "../../components/layout/WhiteHeader";
+import ProductList from "./ProductList";
 
-const ShopScreen = () => {
-  return <div>
-    <WhiteHeader />
-    <ShopLayout />
-  </div>;
+const Index = () => {
+  return (
+    <>
+      <WhiteHeader />
+      <ShopLayout>
+        <ProductList />
+      </ShopLayout>
+    </>
+  );
 };
 
-export default ShopScreen;
+export default Index;
