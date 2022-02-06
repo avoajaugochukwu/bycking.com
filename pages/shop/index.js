@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ShopScreen from "../../screens/Shop/ShopScreen";
+import ShopScreen from "../../screens/Shop";
 
 export default function Shop() {
   return (
