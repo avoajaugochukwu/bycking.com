@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Details from "../../screens/Shop/Details";
+import Details from "../../screens/Shop/Details/Details";
 
 import bikes_data from "../../data/bikes_data";
 
