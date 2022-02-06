@@ -15,18 +15,30 @@ const Gallery = ({ bike }) => {
   }
 
   return (
-    <div className="w-3/4" style={{height: "600px"}}>
-      <Flickity options={flickityOptions} reloadOnUpdate>
-        <div>
-          <img src={bike?.image1} alt="showcase" className="px-32" />
+    <div className="w-3/4  mt-14" style={{ height: "600px" }}>
+      <div>
+        <Flickity options={flickityOptions} reloadOnUpdate>
+          <div>
+            <img src={bike?.image1} alt="showcase" className="px-32" />
+          </div>
+          <div>
+            <img src={bike?.image2} alt="showcase" className="px-32" />
+          </div>
+          <div>
+            <img src={bike?.image3} alt="showcase" className="px-32" />
+          </div>
+        </Flickity>
+      </div>
+      {/* ----------------------------------------------- */}
+      <div>
+      <div className="flex justify-center">
+        <img src={bike?.logo} alt={bike?.brand} className="w-20 h-10" />
+        <div className="ml-4 mt-3 pl-4 border-l border-l-gray-300">
+        <span className="font-normal">Wheel</span>
+        <span className="ml-2 font-extralight">{bike?.wheel}</span>
         </div>
-        <div>
-          <img src={bike?.image2} alt="showcase" className="px-32" />
-        </div>
-        <div>
-          <img src={bike?.image3} alt="showcase" className="px-32" />
-        </div>
-      </Flickity>
+      </div>
+      </div>
     </div>
   );
 };
