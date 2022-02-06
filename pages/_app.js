@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import Script from "next/script";
 import CartContextProvider from "../store/context/CartContextProvider";
 
 function MyApp({ Component, pageProps }) {
