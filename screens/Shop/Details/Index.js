@@ -3,7 +3,7 @@ import WhiteHeader from "../../../components/layout/WhiteHeader";
 import Gallery from "./Gallery";
 import OtherDetailsSection from "./OtherDetailsSection";
 
-const Index = (props) => {
+const Details = (props) => {
   const bike = props.bike[0];
 
   return (
@@ -18,4 +18,4 @@ const Index = (props) => {
   );
 };
 
-export default Index;
+export default Details;
