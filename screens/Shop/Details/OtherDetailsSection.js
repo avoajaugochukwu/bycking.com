@@ -1,14 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useContext } from "react";
 import AddToCartButton from "../../../components/common/AddToCartButton";
 import InfoIconWithToolTip from "../../../components/common/InfoIconWithToolTip";
 import { currency } from "../../../utils";
+
+import { CartContext } from '../../../store/context/CartContextProvider'
 
 const blackReturn = "/svg/black-return.svg";
 const shipping = "/svg/black-shipping.svg";
 
 const OtherDetailsSection = ({ bike }) => {
-  console.log(bike);
+
+  const cart = useContext(CartContext);
+
+  const addAction = () => {
+    cart.addToCart(bike)
+  }
+
+  console.log(cart)
+  // console.log(bike);
+
   if (!bike) {
     // Add skeleton
     return "Loading bike";
@@ -63,6 +74,7 @@ const OtherDetailsSection = ({ bike }) => {
       </div>
 
       <div className="mt-6 pb-5 ">
+        <button onClick={addAction}>Home</button>
         <AddToCartButton type="black" />
       </div>
 

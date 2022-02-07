@@ -1,71 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+const STOREKEYS = {
+  CART: "cart",
+};
 
 export const CartContext = React.createContext({ cart: [] });
 
-// const state = getLocalStorage();
+function CartProvider({ children }) {
+  const [cart, setCart] = useState([]);
 
-const getLocalStorage = () => {
-  if (typeof window !== "undefined") {
-    return {
-      cart:
-        window.localStorage.getItem("bycking") === null
-          ? []
-          : window.localStorage.getItem("bycking"),
-    };
-  }
-  return {
-    cart: []
-  };
-};
+  useEffect(() => {
+    const cart = getLocalStorage(STOREKEYS.CART);
+    if (cart) {
+      setCart(cart);
+    }
+  }, []);
 
-const setLocalStorage = () => {
-  if (typeof window !== "undefined") {
+  useEffect(() => {
+    setLocalStorage(STOREKEYS.CART, cart);
+  }, [cart]);
 
-    
-    window.localStorage.setItem("bycking", JSON.stringify({cart: ['Honey']}))
-    const a = window.localStorage.getItem("bycking")
-    console.log('------------')
-    console.log(a)
-    console.log(JSON.parse(a))
-    console.log('------------')
-    
-    return
-  }
-  return 
-};
-const initialState = getLocalStorage()
-const cc = setLocalStorage()
-
-function cartReducer(state, action) {
-  switch (action.type) {
-    case "ADD_ITEM":
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
-    case "REMOVE_ITEM":
-      return {
-        ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
-      };
-    case "CLEAR_CART":
-      return {
-        ...state,
-        cart: [],
-      };
-    default:
-      throw new Error(`Invalid action`);
-  }
+  function addToCart(newItem) {
+    setCart(prevItems => [...prevItems, newItem])
 }
 
-const CartProvider = ({ children }) => {
-  const [cart, dispatch] = React.useReducer(cartReducer, initialState);
-
   return (
-    <CartContext.Provider value={{ cart, dispatch }}>
-      {children}
-    </CartContext.Provider>
+    <CartContext.Provider value={{ cart, addToCart }}>{children}</CartContext.Provider>
   );
-};
+}
 
 export default CartProvider;
+
+const getLocalStorage = (storeKey) => {
+  if (typeof window !== "undefined") {
+    const getData = window.localStorage.getItem(`bycking_${storeKey}`)
+      ? JSON.parse(window.localStorage.getItem(`bycking_${storeKey}`))
+      : [];
+    return getData;
+  }
+  return [];
+};
+
+const setLocalStorage = (storeKey, valueToStore) => {
+  if (!storeKey) return;
+  if (typeof window !== "undefined") {
+    window.localStorage.setItem(
+      `bycking_${storeKey}`,
+      JSON.stringify(valueToStore)
+    );
+    return;
+  }
+  return;
+};
+// const initialState = getLocalStorage();
+// const cc = setLocalStorage(STOREKEYS.CART, ["Honey"] );
+// getLocalStorage();

@@ -1,17 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { CartContext } from '../../store/context/CartContextProvider'
 
-const Header = () => {
-
-  const cart = useContext(CartContext)
-
-  const addAction = () => {
-    cart.dispatch({type: 'ADD_ITEM', payload: 'Honey'})
-  }
-
-  console.log(cart)
+const Header = () => {  
   const [navOpen, setNavOpen] = useState(false)
 
   return (
@@ -25,7 +16,6 @@ const Header = () => {
               <a
                 className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
                 href="#"
-                onClick={addAction}
               >
                 Brand
               </a>
