@@ -1,25 +1,35 @@
-export default function CartSVG({ fill, stroke }) {
+export default function CartSVG({ fill, stroke, showItems }) {
   return (
-    <svg
-      with="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill={fill}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z"
-        stroke={stroke}
-        fill="none"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <span className="relative flex">
+      <svg
+        with="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill={fill}
+        xmlns="http://www.w3.org/2000/svg"
+        className="flex-1"
+      >
+        <path
+          d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z"
+          stroke={stroke}
+          fill="none"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      {/* add check for cart length */}
+      {showItems && (
+        <span className="absolute right-0 top-0 rounded-full bg-red-600 w-3 h-3 top right p-0 m-0 text-white font-mono text-xs  leading-tight text-center">
+          5
+        </span>
+      )}
+    </span>
   );
 }
 
 CartSVG.defaultProps = {
   fill: "none",
   stroke: "white",
-}
+  showItems: false,
+};

@@ -63,7 +63,7 @@ const WhiteHeader = () => {
             <div className="flex justify-center md:block">
               <Link href="/cart">
                 <a className="relative text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300">
-                  <CartSVG stroke="#000" />
+                  <CartSVG stroke="#000" showItems={true} />
                 </a>
               </Link>
             </div>
