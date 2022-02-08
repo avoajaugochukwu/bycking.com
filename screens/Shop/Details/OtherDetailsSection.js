@@ -8,8 +8,6 @@ import "animate.css/animate.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 
-import withToastify from '../../../components/layout/withToastify.js';
-
 import { CartContext } from '../../../store/context/CartContextProvider'
 
 const blackReturn = "/svg/black-return.svg";
@@ -37,7 +35,7 @@ const OtherDetailsSection = ({ bike }) => {
   const cart = useContext(CartContext);
 
   function animateCss() {
-    toast.dark("Hey 👋, see how easy!", {
+    toast.dark("Item added to cart", {
       transition: bounce
     });
   }
@@ -113,7 +111,8 @@ const OtherDetailsSection = ({ bike }) => {
 
       <div className="mt-6 pb-5 ">
         <span onClick={handleAddtoCart}>
-          <AddToCartButton type="black" />
+          {/* <AddToCartButton type="black" /> */}
+          <AddToCartButton />
         </span>
       </div>
 

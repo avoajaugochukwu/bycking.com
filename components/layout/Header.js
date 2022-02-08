@@ -13,12 +13,13 @@ const Header = () => {
         <div className={`container px-6 py-4 mx-auto md:flex z-50 md:justify-between md:items-center ${navOpen ? "fixed" : ""}`}>
           <div className="flex items-center justify-between">
             <div>
-              <a
-                className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
-                href="#"
-              >
-                Brand
-              </a>
+              <Link href="/">
+                <a
+                  className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
+                >
+                  Brand
+                </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
