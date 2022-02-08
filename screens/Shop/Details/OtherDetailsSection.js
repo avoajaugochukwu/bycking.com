@@ -4,26 +4,64 @@ import AddToCartButton from "../../../components/common/AddToCartButton";
 import InfoIconWithToolTip from "../../../components/common/InfoIconWithToolTip";
 import { currency } from "../../../utils";
 
+import "animate.css/animate.min.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast, cssTransition } from "react-toastify";
+
+import withToastify from '../../../components/layout/withToastify.js';
+
 import { CartContext } from '../../../store/context/CartContextProvider'
 
 const blackReturn = "/svg/black-return.svg";
 const shipping = "/svg/black-shipping.svg";
 
+
+const bounce = cssTransition({
+  enter: "animate__animated animate__bounceIn",
+  exit: "animate__animated animate__bounceOut"
+});
+
+// https://animista.net/
+// source animation inside style.css
+const swirl = cssTransition({
+  enter: "swirl-in-fwd",
+  exit: "swirl-out-bck"
+});
+
+
 const OtherDetailsSection = ({ bike }) => {
+  
+  
+  console.log(bike, 'bike')
 
   const cart = useContext(CartContext);
 
-  const addAction = () => {
-    cart.addToCart(bike)
+  function animateCss() {
+    toast.dark("Hey 👋, see how easy!", {
+      transition: bounce
+    });
   }
 
-  console.log(cart)
+  function animista() {
+    toast.dark("Hey 👋, see how easy!", {
+      transition: swirl
+    });
+  }
+
+  const handleAddtoCart = (e) => {
+    e.preventDefault();
+    cart.addToCart(bike)
+    animateCss()
+  }
+
+  // console.log(cart)
   // console.log(bike);
 
   if (!bike) {
     // Add skeleton
     return "Loading bike";
   }
+
   return (
     <div className="w-1/4  mt-6">
       <div className="flex gap-x-2">
@@ -74,8 +112,9 @@ const OtherDetailsSection = ({ bike }) => {
       </div>
 
       <div className="mt-6 pb-5 ">
-        <button onClick={addAction}>Home</button>
-        <AddToCartButton type="black" />
+        <span onClick={handleAddtoCart}>
+          <AddToCartButton type="black" />
+        </span>
       </div>
 
       <div className="mt-5 pb-5 border-b-2 border-t-gray-100">
@@ -119,6 +158,7 @@ const OtherDetailsSection = ({ bike }) => {
           </ul>
         </div>
       </div>
+      <ToastContainer transition={bounce} />
     </div>
   );
 };
