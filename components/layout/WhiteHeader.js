@@ -1,21 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import CartSVG from "../svg/CartSVG";
 
-const WhiteHeader = () => {
+export default function WhiteHeader({ bgColor, textColor }) {
   return (
     <>
-      <nav className=" sticky top-0 inset-x-0 z-50 bg-white dark:bg-gray-800">
+      <nav className={`${ bgColor === 'bg-transparent' ? 'bg-transparent' : 'bg-white' } hidden sm:block sticky top-0 inset-x-0 z-50`}>
         <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
-            
             <Link href="/">
-              <a
-                className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
-              >
-                Brand
+              <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300">
+                <img src="/bycking.logo.png" className="w-20 h-10" alt="logo" />
               </a>
-              </Link>
-            
+            </Link>
 
             {/* Mobile menu button */}
             <div className="flex md:hidden">
@@ -37,24 +34,20 @@ const WhiteHeader = () => {
           {/* Mobile Menu open: "block", Menu closed: "hidden" */}
           <div className="items-center md:flex">
             {/* <div className="flex flex-col md:flex-row md:mx-6"> */}
-            <div className="flex md:flex-row md:mx-6">
+            <div className={`flex md:flex-row md:mx-6 font-medium text-sm ${textColor === 'text-white' ? 'text-white' : 'text-gray-800'}`}>
               <Link href="/">
-                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
-                  Home
-                </a>
+                <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">Home</a>
               </Link>
               <Link href="/shop">
-                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
-                  Shop
-                </a>
+                <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">Shop</a>
               </Link>
               <Link href="/">
-                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">
                   Contact
                 </a>
               </Link>
               <Link href="/">
-                <a className="my-1 text-sm font-medium text-gray-800 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0">
+                <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">
                   About
                 </a>
               </Link>
@@ -62,8 +55,8 @@ const WhiteHeader = () => {
 
             <div className="flex justify-center md:block">
               <Link href="/cart">
-                <a className="relative text-gray-100 transition-colors duration-200 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300">
-                  <CartSVG stroke="#000" showItems={true} />
+                <a className="relative">
+                  <CartSVG stroke={textColor === 'text-white' ? '#FFF' : '#000'} showItems={true} />
                 </a>
               </Link>
             </div>
@@ -74,4 +67,7 @@ const WhiteHeader = () => {
   );
 };
 
-export default WhiteHeader;
+WhiteHeader.defaultProps = {
+  bgColor: "bg-transparent",
+  textColor: "text-white"
+}

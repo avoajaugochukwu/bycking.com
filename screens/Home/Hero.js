@@ -1,12 +1,8 @@
 import React from "react";
 
-import Image from "next/image";
-
-import styles from "./Home.module.scss";
-
-import homeImage from "../../public/img/home_page/gaith-shalan-j_EGWTnu2XI-unsplash.jpg";
 import Header from "../../components/layout/Header";
-import HeaderTest from "../../components/layout/HeaderTest";
+import MobileHeader from "../../components/layout/MobileHeader";
+import WhiteHeader from "../../components/layout/WhiteHeader";
 
 const Hero = () => {
   return (
@@ -21,10 +17,11 @@ const Hero = () => {
           <source src="/yeti.mp4" />
           Your browser does not support HTML5 video.
         </video>
-        <div></div>
 
         <div className="hidden sm:block video-overlay absolute left-0 top-0 z-10 w-full">
-          <Header />
+          
+          <WhiteHeader />
+          {/* <WhiteHeader bgColor='bg-white' textColor='text-gray-800' /> */}
           <div className="ml-4 mt:20 p-4 lg:ml-20 lg:mt-60 lg:p-0">
             <p className="text-4xl lg:text-7xl text-white uppercase">
               Let your bike and gear <br />
@@ -47,7 +44,7 @@ const Hero = () => {
             }}
           >
             <div className="w-full h-full bg-cyan-500/50">
-            <HeaderTest />
+            <MobileHeader />
             </div>
             
             {/* <Header /> */}

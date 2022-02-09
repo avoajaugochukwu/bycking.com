@@ -11,7 +11,7 @@ const Details = (props) => {
 
   return (
     <div>
-      <WhiteHeader />
+      <WhiteHeader bgColor='bg-white' textColor='text-gray-800' />
       <div className="flex">
         <Gallery bike={bike} />
         <OtherDetailsSection bike={bike} />

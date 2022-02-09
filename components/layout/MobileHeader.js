@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import CloseSign from "../../components/svg/CloseSign";
-import HamburgerMenu from "../../components/svg/HamburgerMenu";
+import CloseSign from "../svg/CloseSign";
+import HamburgerMenu from "../svg/HamburgerMenu";
 
-const HeaderTest = () => {
+const MobileHeader = () => {
   const [click, setClick] = React.useState(false);
 
   const handleClick = () => setClick(!click);
@@ -66,4 +66,4 @@ const HeaderTest = () => {
   );
 };
 
-export default HeaderTest;
+export default MobileHeader;

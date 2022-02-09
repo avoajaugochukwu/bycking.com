@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useContext } from "react";
+import WhiteHeader from "../../components/layout/WhiteHeader";
 
 import { CartContext } from "../../store/context/CartContextProvider";
 import { currency } from "../../utils";
@@ -8,6 +9,7 @@ export default function CartScreen() {
   console.log(cart.cart);
   return (
     <>
+      <WhiteHeader bgColor='bg-white' textColor='text-gray-800' />
       {cart.cart.length === 0 ? (
         <h1>Shopping cart is empty</h1>
       ) : (

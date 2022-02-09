@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
 import Flickity from "react-flickity-component";
@@ -37,13 +38,10 @@ const FirstSlideShow = () => {
       <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div>
-            <Image
+            <img
               src="/img/home_page/showcase/yeti-arc.jpeg"
               className="px-20"
               alt="showcase"
-              layout="intrinsic"
-              width={900}
-              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Legendary DNA</span>
@@ -51,13 +49,10 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            <Image
+            <img
               src="/img/home_page/showcase/YetiCycles_SB165_T3_Moss.jpeg"
               className="px-20"
               alt="showcase"
-              layout="intrinsic"
-              width={900}
-              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">At home outside the tape</span>
@@ -65,13 +60,10 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            <Image
+            <img
               src="/img/home_page/showcase/YetiCycles_SB140LR_T5_Blanco.jpeg"
               className="px-20"
               alt="showcase"
-              layout="intrinsic"
-              width={900}
-              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">Down to fun</span>
@@ -79,13 +71,10 @@ const FirstSlideShow = () => {
             </div>
           </div>
           <div>
-            <Image
+            <img
               src="/img/home_page/showcase/YetiCycles_SB130LR_T5_Watermelon_AXS_CW.jpeg"
               className="px-20"
               alt="showcase"
-              layout="intrinsic"
-              width={900}
-              height={450}
             />
             <div className="text-xl sm:text-3xl uppercase font-semibold text-center">
               <span className="">One bike that rules</span>

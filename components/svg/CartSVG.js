@@ -1,10 +1,15 @@
-export default function CartSVG({ fill, stroke, showItems }) {
+import React, { useContext } from "react";
+import { CartContext } from "../../store/context/CartContextProvider";
+export default function CartSVG({ fill, stroke, showItems, inHeader }) {
+  const cart = useContext(CartContext);
+  const cartLength = cart.cart?.length;
+
   return (
     <span className="relative flex">
       <svg
-        with="24"
-        height="24"
-        viewBox="0 0 24 24"
+        with={`${inHeader ? '30' : '24' }`}
+        height={`${inHeader ? '30' : '24' }`}
+        viewBox={`0 0 ${inHeader ? '30 30' : '24 24' }`}
         fill={fill}
         xmlns="http://www.w3.org/2000/svg"
         className="flex-1"
@@ -19,9 +24,9 @@ export default function CartSVG({ fill, stroke, showItems }) {
         />
       </svg>
       {/* add check for cart length */}
-      {showItems && (
+      {showItems && cartLength > 0 && (
         <span className="absolute right-0 top-0 rounded-full bg-red-600 w-3 h-3 top right p-0 m-0 text-white font-mono text-xs  leading-tight text-center">
-          5
+          {cartLength}
         </span>
       )}
     </span>
@@ -32,4 +37,5 @@ CartSVG.defaultProps = {
   fill: "none",
   stroke: "white",
   showItems: false,
+  inHeader: false
 };
