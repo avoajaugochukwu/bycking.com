@@ -15,8 +15,8 @@ const HomeScreen = ({ data }) => {
         <MobileHero />
       </div>
       <div className="relative">
-        {/* <FirstSlideShow /> */}
-        {/* <SecondSlideShow /> */}
+        <FirstSlideShow />
+        <SecondSlideShow />
         <HomeScreenStore />
         <PaymentMethods />
       </div>

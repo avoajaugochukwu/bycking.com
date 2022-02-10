@@ -22,7 +22,7 @@ const SecondSlideShow = () => {
           </div>
         </div>
       </div>
-      <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
+      <div className="my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div >
             <img
