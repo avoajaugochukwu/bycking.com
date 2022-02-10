@@ -5,7 +5,7 @@ const ShopLayout = (props) => {
   return (
     <div className="">
       <div className="flex ">
-        <aside className="min-h-screen pt-4 px-1 w-60 text-white bg-gray-700 fixed">
+        <aside className="min-h-screen px-1 w-60 text-white bg-gray-700 fixed">
           {/* <div className=""> */}
         </aside>
         ;kkk

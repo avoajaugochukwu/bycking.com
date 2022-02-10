@@ -1,5 +1,5 @@
 import React from "react";
-import WhiteHeader from "../../../components/layout/WhiteHeader";
+import DesktopHeader from "../../../components/layout/DesktopHeader";
 import BikeDescription from "./BikeDescription";
 import Gallery from "./Gallery";
 import OtherDetailsSection from "./OtherDetailsSection";
@@ -11,7 +11,7 @@ const Details = (props) => {
 
   return (
     <div>
-      <WhiteHeader bgColor='bg-white' textColor='text-gray-800' />
+      <DesktopHeader bgColor='bg-white' textColor='text-gray-800' />
       <div className="flex">
         <Gallery bike={bike} />
         <OtherDetailsSection bike={bike} />

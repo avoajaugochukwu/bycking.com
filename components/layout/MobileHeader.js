@@ -1,58 +1,104 @@
+/* eslint-disable @next/next/link-passhref */
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Link from "next/link";
 
 import CloseSign from "../../components/svg/CloseSign";
 import HamburgerMenu from "../../components/svg/HamburgerMenu";
+import CartSVG from "../svg/CartSVG";
 
-const MobileHeader = () => {
+/**
+ *
+ * @returns Mobile header and text for Jumbotro on home screen
+ */
+
+const MobileHeader = ({ bgColor, color, showHomePageHero }) => {
   const [click, setClick] = React.useState(false);
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   return (
-    <div className="block sm:hidden w-full h-full bg-cyan-500/50">
-      <div
-        className={
-          click ? "absolute top-14 left-0 right-0 bottom-0 bg-black/75" : ""
-        }
-        onClick={() => Close()}
-      />
-      <nav className="bg-black/0 " onClick={(e) => e.stopPropagation()}>
-        <div className="flex justify-between ">
-          <a
-            to="/"
-            className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
-          >
-            Brand
-          </a>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Home
+    <div className={`block sm:hidden w-full h-full p1-2 `}>
+      <div className="h-16  pl-4 pt-4 pb-4">
+        <div
+          className={
+            click ? "fixed top-16 left-0 right-0 bottom-0 bg-cyan-500/[.9]" : ""
+          }
+          onClick={() => Close()}
+        />
+        <nav className="bg-black/0 " onClick={(e) => e.stopPropagation()}>
+          <div className="flex justify-between ">
+            <Link href="/">
+              <a className="mb-2">
+                <img src="/bycking.logo.png" className="w-20" alt="logo" />
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-links" onClick={click ? handleClick : null}>
-                Contact Us
-              </a>
-            </li>
-          </ul>
-          <div className="z-5- text-yellow-400 pt-4" onClick={handleClick}>
-            <p className="">{click ? <CloseSign /> : <HamburgerMenu />}</p>
+            </Link>
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <Link href="/">
+                  <a className="nav-links" onClick={click ? handleClick : null}>
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/shop">
+                  <a className="nav-links" onClick={click ? handleClick : null}>
+                    Shop
+                  </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/">
+                  <a className="nav-links" onClick={click ? handleClick : null}>
+                    Blog
+                  </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <a className="nav-links" onClick={click ? handleClick : null}>
+                  Contact Us
+                </a>
+              </li>
+              <div
+                className="w-6 mx-auto "
+                onClick={click ? handleClick : null}
+              >
+                <div className="py-7">
+                  <CartSVG showItems={true} />
+                </div>
+              </div>
+            </ul>
+            <div className="z-5- pt-2" onClick={handleClick}>
+              <p className="">
+                {click ? (
+                  <CloseSign color={color} />
+                ) : (
+                  <HamburgerMenu color={color} />
+                )}
+              </p>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+
+        {/* If on home page */}
+        {showHomePageHero && (
+          <div className="px-2 mt-40 p-4 ">
+            <p className="px-2 text-4xl text-white uppercase bg-black/40">
+              Let your bike and gear <br />
+              reflect your personality
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
+};
+
+MobileHeader.defaultProps = {
+  bgColor: "White",
+  color: "white",
+  showHomePageHero: false,
 };
 
 export default MobileHeader;

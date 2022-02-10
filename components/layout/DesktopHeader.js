@@ -2,14 +2,14 @@
 import Link from "next/link";
 import CartSVG from "../svg/CartSVG";
 
-export default function WhiteHeader({ bgColor, textColor }) {
+export default function DesktopHeader({ bgColor, textColor }) {
   return (
     <>
       <nav className={`${ bgColor === 'bg-transparent' ? 'bg-transparent' : 'bg-white' } hidden sm:block sticky top-0 inset-x-0 z-50`}>
         <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <Link href="/">
-              <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300">
+              <a className="">
                 <img src="/bycking.logo.png" className="w-20 h-10" alt="logo" />
               </a>
             </Link>
@@ -67,7 +67,7 @@ export default function WhiteHeader({ bgColor, textColor }) {
   );
 };
 
-WhiteHeader.defaultProps = {
+DesktopHeader.defaultProps = {
   bgColor: "bg-transparent",
   textColor: "text-white"
 }

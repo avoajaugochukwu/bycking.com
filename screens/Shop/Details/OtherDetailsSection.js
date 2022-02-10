@@ -29,20 +29,18 @@ const swirl = cssTransition({
 
 
 const OtherDetailsSection = ({ bike }) => {
-  
-  
-  console.log(bike, 'bike')
 
   const cart = useContext(CartContext);
 
   function animateCss() {
-    toast.dark("Item added to cart", {
+    toast("Item added to cart", {
       transition: bounce
     });
   }
 
   function animista() {
-    toast.dark("Hey 👋, see how easy!", {
+    toast("Hey 👋, see how easy!", {
+      position: "bottom-right",
       transition: swirl
     });
   }
@@ -52,9 +50,6 @@ const OtherDetailsSection = ({ bike }) => {
     cart.addToCart(bike)
     animateCss()
   }
-
-  // console.log(cart)
-  // console.log(bike);
 
   if (!bike) {
     // Add skeleton
@@ -135,7 +130,7 @@ const OtherDetailsSection = ({ bike }) => {
           </ul>
         </div>
       </div>
-      <ToastContainer transition={bounce} />
+      <ToastContainer position="bottom-right" transition={bounce} />
     </div>
   );
 };

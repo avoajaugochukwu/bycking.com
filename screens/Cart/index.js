@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useContext } from "react";
-import WhiteHeader from "../../components/layout/WhiteHeader";
+import MobileHeader from "../../components/layout/MobileHeader";
+import DesktopHeader from "../../components/layout/DesktopHeader";
 
 import { CartContext } from "../../store/context/CartContextProvider";
 import CartList from "./CartList";
@@ -10,7 +11,8 @@ export default function CartScreen() {
 
   return (
     <>
-      <WhiteHeader bgColor="bg-white" textColor="text-gray-800" />
+      <DesktopHeader bgColor="bg-white" textColor="text-gray-800" />
+      <MobileHeader color="cyan" />
       {cart.cart.length === 0 ? (
         <h1>Shopping cart is empty</h1>
       ) : (
