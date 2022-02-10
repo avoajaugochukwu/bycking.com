@@ -20,12 +20,38 @@ function CartProvider({ children }) {
     setLocalStorage(STOREKEYS.CART, cart);
   }, [cart]);
 
-  function addToCart(newItem) {
-    setCart(prevItems => [...prevItems, newItem])
-}
+  function addToCart(item) {
+    let newItem = {};
+
+    if(!item.hasOwnProperty('quantity')) {
+      newItem = {...item, quantity: 1}
+    }
+
+    const cartItem = cart.filter((product) => product.id === item.id);
+
+    if (cartItem.length === 0) {
+      setCart((prevItems) => [...prevItems, newItem]);
+    } else {
+      const newCart = cart.map(obj => {
+        if (obj.id === item.id) {
+          const newQuantity = obj.quantity + 1;
+          const newPrice = newQuantity * item.price
+          return {...obj, quantity: obj.quantity + 1, price: newPrice};
+        }
+        return obj;
+      });
+      setCart(newCart)
+    }  
+  }
+
+  function removeFromCart(itemId) {
+    setCart((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+      {children}
+    </CartContext.Provider>
   );
 }
 
@@ -52,6 +78,3 @@ const setLocalStorage = (storeKey, valueToStore) => {
   }
   return;
 };
-// const initialState = getLocalStorage();
-// const cc = setLocalStorage(STOREKEYS.CART, ["Honey"] );
-// getLocalStorage();

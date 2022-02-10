@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="ml-2 mt-1 cursor-pointer">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="svg/new-email-interface-symbol-of-black-closed-envelope-svgrepo-com.svg"
+                src="/svg/new-email.svg"
                 className="h-6 w-6 p-0"
                 alt="enter email"
               />
