@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Flickity from "react-flickity-component";
 
@@ -24,7 +25,6 @@ const SecondSlideShow = () => {
       <div className="w-full my-0 sm:my-14 mx-1 sm:mx-20 md:mx-5">
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/img/home_page/showcase/YetiCycles_160E_T1_Turq-removebg-preview.png"
               className="px-20"
@@ -37,7 +37,6 @@ const SecondSlideShow = () => {
             </div>
           </div>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/img/home_page/showcase/YetiCycles_SB115_T3_Turq_AXS-removebg-preview.png"
               className="px-20"
@@ -49,7 +48,6 @@ const SecondSlideShow = () => {
             </div>
           </div>
           <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/img/home_page/showcase/YetiCycles_SB150_T1_Turq_CW-removebg-preview.png"
               className="px-20"

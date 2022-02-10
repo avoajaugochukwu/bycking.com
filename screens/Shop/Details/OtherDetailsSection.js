@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 
 import { CartContext } from '../../../store/context/CartContextProvider'
+import Stars from "../../../components/common/Stars";
 
 const blackReturn = "/svg/black-return.svg";
 const shipping = "/svg/black-shipping.svg";
@@ -62,32 +63,9 @@ const OtherDetailsSection = ({ bike }) => {
 
   return (
     <div className="w-1/4  mt-6">
-      <div className="flex gap-x-2">
-        <img
-          src="../svg/gold-star-svgrepo-com.svg"
-          alt="gray-star"
-          className="w-4 h-4"
-        />
-        <img
-          src="../svg/gold-star-svgrepo-com.svg"
-          alt="gray-star"
-          className="w-4 h-4"
-        />
-        <img
-          src="../svg/gold-star-svgrepo-com.svg"
-          alt="gray-star"
-          className="w-4 h-4"
-        />
-        <img
-          src="../svg/gold-star-svgrepo-com.svg"
-          alt="gray-star"
-          className="w-4 h-4"
-        />
-        <img
-          src="../svg/gray-star-svgrepo-com.svg"
-          alt="gray-star"
-          className="w-4 h-4"
-        />
+      <div className="flex">
+        <Stars number={4} />
+        <p className="ml-2 -mt-1 font-extralight">({bike?.starReviewNumber})</p>
       </div>
 
       <h1 className="text-2xl font-black mt-2 mb-10">{bike?.name}</h1>

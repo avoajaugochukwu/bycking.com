@@ -25,7 +25,7 @@ export default function CartSVG({ fill, stroke, showItems, inHeader }) {
       </svg>
       {/* add check for cart length */}
       {showItems && cartLength > 0 && (
-        <span className="absolute right-0 top-0 rounded-full bg-red-600 w-3 h-3 top right p-0 m-0 text-white font-mono text-xs  leading-tight text-center">
+        <span className="absolute -right-2 -top-2 rounded-full bg-red-600 w-4 h-4 top right p-0 m-0 pt-[1/2] text-white font-mono text-sm  leading-tight text-center">
           {cartLength}
         </span>
       )}

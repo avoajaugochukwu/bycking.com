@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-import CloseSign from "../svg/CloseSign";
-import HamburgerMenu from "../svg/HamburgerMenu";
+import CloseSign from "../../components/svg/CloseSign";
+import HamburgerMenu from "../../components/svg/HamburgerMenu";
 
 const MobileHeader = () => {
   const [click, setClick] = React.useState(false);
@@ -9,19 +9,15 @@ const MobileHeader = () => {
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   return (
-    <div>
+    <div className="block sm:hidden w-full h-full bg-cyan-500/50">
       <div
         className={
-          click ? "absolute  top-20 left-0 right-0 bottom-0 bg-black/75" : ""
+          click ? "absolute top-14 left-0 right-0 bottom-0 bg-black/75" : ""
         }
         onClick={() => Close()}
       />
       <nav className="bg-black/0 " onClick={(e) => e.stopPropagation()}>
-        {" "}
-        {/* navbar */}
         <div className="flex justify-between ">
-          {" "}
-          {/* nav-container */}
           <a
             to="/"
             className="text-2xl font-bold text-gray-100 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-100 dark:hover:text-gray-300"
@@ -55,13 +51,6 @@ const MobileHeader = () => {
           </div>
         </div>
       </nav>
-
-      <div className="ml-4 mt-40 p-4 lg:ml-20 lg:mt-60 lg:p-0">
-        <p className="text-4xl lg:text-7xl text-white uppercase">
-          Let your bike and gear <br />
-          reflect your personality
-        </p>
-      </div>
     </div>
   );
 };
