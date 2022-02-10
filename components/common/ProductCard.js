@@ -5,7 +5,7 @@ export default function ProductCard({ product }) {
     <Link href={`/shop/${encodeURIComponent(product.url)}`} passHref={true}>
       <div
         key={product.name}
-        className="w-full bg-white cursor-pointer rounded-lg py-4 product-box-shadow"
+        className="w-full bg-white cursor-pointer rounded-lg py-4 product-box-shadow my-4 sm:my-0"
       >
         <div className="px-4 overflow-hidden">
           <p className="text-xl font-semibold">{product.name}</p>
@@ -57,3 +57,7 @@ export default function ProductCard({ product }) {
     </Link>
   );
 }
+
+ProductCard.defaultProps = {
+  product: {},
+};
