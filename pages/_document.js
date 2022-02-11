@@ -21,6 +21,7 @@ export default function Document() {
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
           />
         </noscript>
+        <link rel="icon" href="/favicon_io/favicon.ico" />
       </Head>
       <body>
         <Main />

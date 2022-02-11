@@ -18,16 +18,26 @@ const MobileHeader = ({ bgColor, color, showHomePageHero }) => {
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   return (
-    <div className={`block sm:hidden w-full h-full p1-2 `}>
-      <div className="h-16  pl-4 pt-4 pb-4">
+    <div
+      className={`block sm:hidden w-full h-full p1-2 ${
+        click ? "fixed z-50 " : ""
+      }`}
+    >
+      <div className={`h-16 relative pl-4 pt-4 pb-4 ${click && "bg-cyan-500"}`}>
         <div
           className={
-            click ? "fixed top-16 left-0 right-0 bottom-0 bg-cyan-500/[.9]" : ""
+            click
+              ? "fixed w-screen h-full top-16 left-0 right-0 bottom-0 bg-cyan-500"
+              : ""
           }
           onClick={() => Close()}
         />
         <nav className="bg-black/0 " onClick={(e) => e.stopPropagation()}>
-          <div className="flex justify-between ">
+          <div
+            className={`flex justify-between ${
+              click ? "sticky top-0 inset-x-0 z-50" : ""
+            }`}
+          >
             <Link href="/">
               <a className="mb-2">
                 <img src="/bycking.logo.png" className="w-20" alt="logo" />
@@ -49,30 +59,34 @@ const MobileHeader = ({ bgColor, color, showHomePageHero }) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/">
+                <Link href="/comingsoon">
                   <a className="nav-links" onClick={click ? handleClick : null}>
                     Blog
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-links" onClick={click ? handleClick : null}>
-                  Contact Us
-                </a>
+                <Link href="/comingsoon">
+                  <a className="nav-links" onClick={click ? handleClick : null}>
+                    Contact Us
+                  </a>
+                </Link>
               </li>
               <div
                 className="w-6 mx-auto "
                 onClick={click ? handleClick : null}
               >
                 <div className="py-7">
-                  <CartSVG showItems={true} />
+                  <Link href="/cart">
+                    <CartSVG showItems={true} />
+                  </Link>
                 </div>
               </div>
             </ul>
-            <div className="z-5- pt-2" onClick={handleClick}>
+            <div className="z-50 pt-2" onClick={handleClick}>
               <p className="">
                 {click ? (
-                  <CloseSign color={color} />
+                  <CloseSign color={click ? "white" : color} />
                 ) : (
                   <HamburgerMenu color={color} />
                 )}

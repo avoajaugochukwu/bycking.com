@@ -41,12 +41,12 @@ export default function DesktopHeader({ bgColor, textColor }) {
               <Link href="/shop">
                 <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">Shop</a>
               </Link>
-              <Link href="/">
+              <Link href="/comingsoon">
                 <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">
                   Contact
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/comingsoon">
                 <a className="my-1 hover:text-cyan-500 md:mx-4 md:my-0">
                   About
                 </a>

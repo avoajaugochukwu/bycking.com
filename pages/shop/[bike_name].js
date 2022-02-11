@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Details from "../../screens/Shop/Details";
 
@@ -13,7 +14,15 @@ export default function BikeDetails() {
     return;
   }
 
-  return <Details bike={bike_details} />;
+  return (
+    <>
+      <Head>
+        <title>Bycking | { bike_details[0]?.brand } | { bike_details[0]?.name }</title>
+        <meta name="description" content="Bycking | Cart" />
+      </Head>
+      <Details bike={bike_details} />
+    </>
+  );
 }
 
 // export async function getServerSideProps({ params }) {

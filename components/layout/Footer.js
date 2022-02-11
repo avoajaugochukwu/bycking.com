@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -8,39 +9,37 @@ const Footer = () => {
           <div>
             <ul className="list-none text-white">
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Company
+                <Link href="/comingsoon">Company</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Switch Infinity
+                <Link href="/comingsoon">Switch Infinity</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Sixfinity
+                <Link href="/comingsoon">Sixfinity</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Materials
+                <Link href="/comingsoon">Materials</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Our Process
+                <Link href="/comingsoon">Our Process</Link>
               </li>
             </ul>
           </div>
           {/*  */}
           <div>
             <ul className="list-none text-gray-400">
+              <li className="my-3 hover:text-gray-300 cursor-pointer">Setup</li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Company
+                <Link href="/comingsoon">Manuals</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Switch Infinity
+                <Link href="/comingsoon">Warranty</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Sixfinity
+                <Link href="/comingsoon">Bike Registration</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Materials
-              </li>
-              <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Our Process
+                <Link href="/comingsoon">Patents</Link>
               </li>
             </ul>
           </div>
@@ -48,16 +47,16 @@ const Footer = () => {
           <div>
             <ul className="list-none text-gray-500">
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Company
+                <Link href="/comingsoon">Contact us</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Switch Infinity
+                <Link href="/comingsoon">Shipping/returns</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Sixfinity
+                <Link href="/comingsoon">Careers</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
-                Materials
+                <Link href="/comingsoon">Materials</Link>
               </li>
               <li className="my-3 hover:text-gray-300 cursor-pointer">
                 Our Process
