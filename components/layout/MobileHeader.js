@@ -17,6 +17,24 @@ const MobileHeader = ({ bgColor, color, showHomePageHero }) => {
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+
+  const getCartSVGColor = () => {
+    let color = "#fff";
+
+    if (showHomePageHero && click) {
+      return color;
+    }
+    if (click) {
+      return color
+    }
+    if (!click) {
+      color = "#000";
+      return color
+    }
+ 
+    return color
+  }
+
   return (
     <div
       className={`block sm:hidden w-full h-full p1-2 ${
@@ -83,14 +101,21 @@ const MobileHeader = ({ bgColor, color, showHomePageHero }) => {
                 </div>
               </div>
             </ul>
-            <div className="z-50 pt-2" onClick={handleClick}>
-              <p className="">
+            <div className="z-50 pt-2 flex">
+              <div className="mr-5">
+                <Link href="/cart">
+                  <a>
+                  <CartSVG stroke={getCartSVGColor()} showItems={true} />
+                  </a>
+                </Link>
+              </div>
+              <div className="" onClick={handleClick}>
                 {click ? (
                   <CloseSign color={click ? "white" : color} />
                 ) : (
                   <HamburgerMenu color={color} />
                 )}
-              </p>
+              </div>
             </div>
           </div>
         </nav>

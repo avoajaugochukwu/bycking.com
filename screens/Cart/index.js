@@ -8,9 +8,12 @@ import { CartContext } from "../../store/context/CartContextProvider";
 import CartList from "./CartList";
 import PaymentMethods from "../../components/common/PaymentMethods";
 import Footer from "../../components/layout/Footer";
+import CheckoutSection from "./CheckoutSection";
 
 export default function CartScreen() {
   const cart = useContext(CartContext);
+
+  const totalAmount = cart.cart?.reduce((a, b) => a + b.price, 0);
 
   return (
     <>
@@ -28,11 +31,13 @@ export default function CartScreen() {
           </div>
         </div>
       ) : (
-        <div className="flex mt-5 mx-auto w-5/6">
-          <div className="w-4/6">
+        <div className="flex flex-col-reverse w-full mt-0 mb-32 sm:mt-5 px-3 sm:flex-row sm:mx-auto sm:w-5/6">
+          <div className="w-full sm:w-4/6">
             <CartList cartList={cart.cart} />
           </div>
-          <div className="bg-gray-400 w-2/6 h-screen"></div>
+          <div className="w-full sm:w-2/6 ">
+            <CheckoutSection totalAmount={totalAmount} />
+          </div>
         </div>
       )}
       <PaymentMethods />

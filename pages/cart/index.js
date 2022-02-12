@@ -1,5 +1,5 @@
 import Head from "next/head";
-import CartScreen from "../screens/Cart";
+import CartScreen from "../../screens/Cart";
 
 export default function Cart() {
   return (
