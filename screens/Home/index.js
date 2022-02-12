@@ -4,7 +4,6 @@ import FirstSlideShow from "./FirstSlideShow";
 
 import MobileHero from "./MobileHero";
 import HomeScreenStore from "./HomeScreenStore";
-import PaymentMethods from "../../components/common/PaymentMethods";
 import SecondSlideShow from "./SecondSlideShow";
 
 const HomeScreen = ({ data }) => {
@@ -18,7 +17,6 @@ const HomeScreen = ({ data }) => {
         <FirstSlideShow />
         <SecondSlideShow />
         <HomeScreenStore />
-        <PaymentMethods />
       </div>
     </div>
   );

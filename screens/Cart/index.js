@@ -1,13 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useContext } from "react";
 import Link from "next/link";
+
+import { CartContext } from "../../store/context/CartContextProvider";
+
+import Footer from "../../components/layout/Footer";
 import MobileHeader from "../../components/layout/MobileHeader";
 import DesktopHeader from "../../components/layout/DesktopHeader";
 
-import { CartContext } from "../../store/context/CartContextProvider";
 import CartList from "./CartList";
-import PaymentMethods from "../../components/common/PaymentMethods";
-import Footer from "../../components/layout/Footer";
 import CheckoutSection from "./CheckoutSection";
 
 export default function CartScreen() {
@@ -40,7 +40,6 @@ export default function CartScreen() {
           </div>
         </div>
       )}
-      <PaymentMethods />
       <Footer />
     </>
   );

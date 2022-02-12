@@ -6,7 +6,6 @@ import Gallery from "./Gallery";
 import OtherDetailsSection from "./OtherDetailsSection";
 import Footer from '../../../components/layout/Footer';
 import Specifications from "./Specifications";
-import PaymentMethods from "../../../components/common/PaymentMethods";
 
 const Details = (props) => {
   // Get bike for display
@@ -22,7 +21,6 @@ const Details = (props) => {
       </div>
         <BikeDescription bike={bike} />
         <Specifications />
-        <PaymentMethods />
         <Footer />
     </div>
   );

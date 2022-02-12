@@ -1,6 +1,6 @@
 import React from "react";
 
-const PaymentMethods = () => {
+const PaymentTypes = () => {
   return (
     <div>
       <div className="bg-gray-400 py-6 px-5">
@@ -120,4 +120,4 @@ const PaymentMethods = () => {
   );
 };
 
-export default PaymentMethods;
+export default PaymentTypes;

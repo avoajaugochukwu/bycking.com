@@ -1,7 +1,10 @@
-import React, { useContext } from "react"
+import React, { useContext } from "react";
 import { CartContext } from "../../../store/context/CartContextProvider";
+
+import Footer from "../../../components/layout/Footer";
 import DesktopHeader from "../../../components/layout/DesktopHeader";
 import MobileHeader from "../../../components/layout/MobileHeader";
+
 import CheckoutSection from "./CheckoutSection";
 
 const CheckoutScreen = () => {
@@ -15,6 +18,7 @@ const CheckoutScreen = () => {
         <CheckoutSection cart={cart.cart} />
         <div>hghgh</div>
       </div>
+      <Footer />
     </>
   );
 };
