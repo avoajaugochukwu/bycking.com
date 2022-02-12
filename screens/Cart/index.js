@@ -6,6 +6,8 @@ import DesktopHeader from "../../components/layout/DesktopHeader";
 
 import { CartContext } from "../../store/context/CartContextProvider";
 import CartList from "./CartList";
+import PaymentMethods from "../../components/common/PaymentMethods";
+import Footer from "../../components/layout/Footer";
 
 export default function CartScreen() {
   const cart = useContext(CartContext);
@@ -33,6 +35,8 @@ export default function CartScreen() {
           <div className="bg-gray-400 w-2/6 h-screen"></div>
         </div>
       )}
+      <PaymentMethods />
+      <Footer />
     </>
   );
 }

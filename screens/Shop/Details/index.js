@@ -1,9 +1,12 @@
 import React from "react";
 import DesktopHeader from "../../../components/layout/DesktopHeader";
+import MobileHeader from "../../../components/layout/MobileHeader";
 import BikeDescription from "./BikeDescription";
 import Gallery from "./Gallery";
 import OtherDetailsSection from "./OtherDetailsSection";
 import Footer from '../../../components/layout/Footer';
+import Specifications from "./Specifications";
+import PaymentMethods from "../../../components/common/PaymentMethods";
 
 const Details = (props) => {
   // Get bike for display
@@ -12,11 +15,14 @@ const Details = (props) => {
   return (
     <div>
       <DesktopHeader bgColor='bg-white' textColor='text-gray-800' />
+      <MobileHeader color="cyan" />
       <div className="flex">
         <Gallery bike={bike} />
         <OtherDetailsSection bike={bike} />
       </div>
         <BikeDescription bike={bike} />
+        <Specifications />
+        <PaymentMethods />
         <Footer />
     </div>
   );

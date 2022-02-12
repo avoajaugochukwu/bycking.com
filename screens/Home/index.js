@@ -4,7 +4,7 @@ import FirstSlideShow from "./FirstSlideShow";
 
 import MobileHero from "./MobileHero";
 import HomeScreenStore from "./HomeScreenStore";
-import PaymentMethods from "./PaymentMethods";
+import PaymentMethods from "../../components/common/PaymentMethods";
 import SecondSlideShow from "./SecondSlideShow";
 
 const HomeScreen = ({ data }) => {
