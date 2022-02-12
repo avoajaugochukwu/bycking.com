@@ -16,7 +16,7 @@ const Details = (props) => {
     <div>
       <DesktopHeader bgColor='bg-white' textColor='text-gray-800' />
       <MobileHeader color="cyan" />
-      <div className="flex">
+      <div className="sm:flex">
         <Gallery bike={bike} />
         <OtherDetailsSection bike={bike} />
       </div>

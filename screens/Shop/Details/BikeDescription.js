@@ -3,11 +3,11 @@ import Specifications from "./Specifications";
 
 const BikeDescription = ({ bike }) => {
   return (
-    <div className=" w-3/5 mt-28 mx-auto">
+    <div className="w-full sm:w-3/5 mt-10 sm:mt-28 px-5 sm:px-0 sm:mx-auto">
       <h3 className="uppercase text-center font-black text-3xl">Description</h3>
       <div className="font-extralight text-sm">
         <p className="mt-8">
-          The ever-popular {bike?.brand} range now includes the {bike?.name}
+          The ever-popular {bike?.brand} range now includes the {bike?.name}{" "}
           bike with a sophisticated new frame. The entire {bike?.brand}
           range is equipped with Bosch ebike technology, and this model is no
           different. The Motus Tour Plus features the superior Active Line Plus

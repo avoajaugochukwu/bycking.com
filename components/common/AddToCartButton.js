@@ -6,9 +6,9 @@ import CartSVG from "../../components/svg/CartSVG";
 const AddToCartButton = ({ type }) => {
   return (
     <>
-      <div className="cursor-pointer inline-flex w-full overflow-hidden rounded-lg shadow sm:w-auto sm:mx-3">
+      <div className="cursor-pointer w-full rounded-lg shadow">
         <a
-          className={`px-20 inline-flex items-center justify-center  py-3 text-base font-medium text-white bg-gradient-to-r transform transition-colors duration-150 ${
+          className={`px-20 inline-flex w-full rounded-lg items-center justify-center py-3 text-base font-medium text-white bg-gradient-to-r transform transition-colors duration-150 ${
             type === "black"
               ? "from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-600"
               : "from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-600"

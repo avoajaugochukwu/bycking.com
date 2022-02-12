@@ -57,7 +57,7 @@ const OtherDetailsSection = ({ bike }) => {
   }
 
   return (
-    <div className="w-1/4  mt-6">
+    <div className="w-full sm:w-1/4 mt-14 sm:mt-6 px-8 sm:p-0">
       <div className="flex">
         <Stars number={4} />
         <p className="ml-2 -mt-1 font-extralight">({bike?.starReviewNumber})</p>

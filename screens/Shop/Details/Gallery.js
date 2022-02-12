@@ -15,17 +15,17 @@ const Gallery = ({ bike }) => {
   }
 
   return (
-    <div className="w-3/4  mt-14" style={{ height: "600px" }}>
+    <div className="w-full sm:w-3/4 sm:mt-14">
       <div>
         <Flickity options={flickityOptions} reloadOnUpdate>
           <div>
-            <img src={bike?.image1} alt="showcase" className="px-32" />
+            <img src={bike?.image1} alt="showcase" className="px-10 sm:px-32" />
           </div>
           <div>
-            <img src={bike?.image2} alt="showcase" className="px-32" />
+            <img src={bike?.image2} alt="showcase" className="px-10 sm:px-32" />
           </div>
           <div>
-            <img src={bike?.image3} alt="showcase" className="px-32" />
+            <img src={bike?.image3} alt="showcase" className="px-10 sm:px-32" />
           </div>
         </Flickity>
       </div>

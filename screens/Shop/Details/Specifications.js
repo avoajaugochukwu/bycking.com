@@ -2,7 +2,7 @@ import React from "react";
 
 const Specifications = () => {
   return (
-    <div className="w-3/5 mt-28 mb-60 mx-auto container">
+    <div className="w-full sm:w-3/5 mt-10 sm:mt-28 px-5 sm:px-0 sm:mx-auto mb-40 container">
       <h3 className="uppercase text-center font-black text-3xl mb-10">
         Specifications
       </h3>
