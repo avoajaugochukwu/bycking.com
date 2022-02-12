@@ -4,9 +4,7 @@ const PaymentTypes = () => {
   return (
     <div>
       <div className="bg-gray-400 py-6 px-5">
-        <p className=" mb-2">
-          Accepted payment methods
-        </p>
+        <p className=" mb-2">Accepted payment methods</p>
         <div className="flex gap-x-10">
           <svg
             width="46"
