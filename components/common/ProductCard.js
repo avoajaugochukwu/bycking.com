@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 export default function ProductCard({ product, homePage }) {
@@ -8,13 +9,21 @@ export default function ProductCard({ product, homePage }) {
         className="w-full bg-white cursor-pointer rounded-lg py-4 product-box-shadow my-4 sm:my-0"
       >
         <div className="px-4 overflow-hidden">
-          <p className="text-xl font-semibold">{product.name}</p>
-          <p className="text-gray-500 font-thin">
-            ${product.price}, monthly from ${Math.round(product.price / 24)}
-          </p>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <div className="flex justify-between">
+            <div>
+              <p className="text-xl font-semibold">{product.name}</p>
+              <p className="text-gray-500 font-thin">
+                ${product.price}, monthly from ${Math.round(product.price / 24)}
+              </p>
+            </div>
+            <div>
+            <img src={product?.logo} alt={product?.brand} className="w-16 h-12" />
+            </div>
+          </div>
           <img
-            className={`card-zoom-image h-60 min-w-full ${homePage ? '' : 'px-2 py-8'}`}
+            className={`card-zoom-image h-60 min-w-full ${
+              homePage ? "" : "px-2 py-8"
+            }`}
             alt="big-image"
             src={`${product.image1}`}
           />

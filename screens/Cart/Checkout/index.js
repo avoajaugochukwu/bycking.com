@@ -6,6 +6,7 @@ import DesktopHeader from "../../../components/layout/DesktopHeader";
 import MobileHeader from "../../../components/layout/MobileHeader";
 
 import CheckoutSection from "./CheckoutSection";
+import Summary from "./Summary";
 
 const CheckoutScreen = () => {
   const cart = useContext(CartContext);
@@ -16,7 +17,7 @@ const CheckoutScreen = () => {
       <MobileHeader color="cyan" />
       <div className="flex flex-col w-full mt-0 mb-32 sm:mt-5 px-3 sm:flex-row sm:mx-auto sm:w-5/6">
         <CheckoutSection cart={cart.cart} />
-        <div>hghgh</div>
+        <Summary cart={cart.cart} />
       </div>
       <Footer />
     </>

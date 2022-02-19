@@ -3,7 +3,7 @@ import PaymentMethods from "./PaymentMethods"
 
 
 const CheckoutSection = ({ cart }) => {
-  console.log(cart)
+  // console.log(cart)
   return (
     <div className="w-3/5">
       {/* <Address /> */}

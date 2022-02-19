@@ -1,13 +1,5 @@
 import React from 'react'
 
-const colorArray = ['blue', ' green', 'yellow', 'red', 'cyan'];
-
-const generateRandomColor = () => {
-  const random = Math.ceil(Math.random() * 5)
-  console.log(random)
-  return colorArray[random]
-}
-
 const CartTag = ({ type }) => {
 
   const getBackground = (type) => {

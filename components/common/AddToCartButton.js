@@ -1,7 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import CartSVG from "../../components/svg/CartSVG";
-// const whiteCart = '/svg/white-cart.svg';
 
 const AddToCartButton = ({ type }) => {
   return (
@@ -14,7 +12,6 @@ const AddToCartButton = ({ type }) => {
               : "from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-600"
           }`}
         >
-          {/* <img src={whiteCart} alt="whiteCart" className="" /> */}
           <CartSVG fill="none" stroke="white" />
           <span className="mx-2">Add to cart</span>
         </a>
