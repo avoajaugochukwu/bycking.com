@@ -6,7 +6,7 @@ const ProductList = () => {
     <div>
       <div className="md:grid grid-cols-3 gap-4 px-3 pt-3 sm:pt-10 pb-20">
         {bikes_data.map((product, index) => (
-          <ProductCard key={index} product={product} />
+          <ProductCard key={index} product={product} homePage={false} />
         ))}
       </div>
     </div>
